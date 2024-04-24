@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title> login</title>
+  <style>
+    body
+    {
+       text-align: center;
+    }
+
+  </style>
+
+</head>
+<body>
+
+   <h1> Exemplo para tela login DIMDIM</h1>
+
+   <form id="FormularioLogin">
+       <label for="usuario"> Usuário</label>
+       <input type="text" id="usuario" name="usuario"><br>
+       <label for="senha">Senha:</label>
+       <input type="password" id="senha" name="senha"><br>
+       <button type="button" onclick="efetuarlogin();">Enviar</button>
+       <button type="button" onclick="limparCampos();">Limpar Campos</button>
+   </form>
+
+    <script>
+      function efetuarlogin()
+      {
+        let usuario = document.getElementById('usuario').value;
+        let senha = document.getElementById('senha').value;
+        if(usuario='senac' && senha == '123456')
+        {
+          window.location.href= 'http://www.googole.com.br';
+        }
+        else if(usuario=='senac')
+        {
+        alert("usuário e senha corretos!!");
+        }
+
+        else
+        {
+        alert("usuário ou senha incorretos!!");
+        }
+
+      }
+         
+      function limparCampos()
+      {
+         document.getElementById('usuario').value='';
+         document.getElementById('senha').value='';
+         document.getElementById('usuario').focus();
+         
+      }
+
+        
+
+        
+
+        
+
+    </script>
+
+</body>
+</html>
